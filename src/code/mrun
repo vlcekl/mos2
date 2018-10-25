@@ -1,0 +1,9 @@
+#!/bin/bash
+
+conc=('re05' 're55' 're78' 're95')
+
+for c in ${conc[*]} ; do
+    cd $c
+    ./lg < $c.inp > lg.run &
+    cd ..
+done
